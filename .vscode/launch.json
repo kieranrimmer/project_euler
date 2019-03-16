@@ -31,6 +31,20 @@
       "externalConsole": true,
       "MIMode": "lldb",
       "preLaunchTask": "build++ 002_fib_sum"
+    },
+
+    {
+      "name": "003_prime_factors (lldb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/003_prime_factors",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "preLaunchTask": "build++ 003_prime_factors"
     }
     
 

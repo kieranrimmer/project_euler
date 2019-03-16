@@ -19,6 +19,15 @@
       "args": [
           "-I${workspaceFolder}", "-DDEBUG_LOG_CXX", "-std=c++14", "-g", "src/002_fib_sum.cpp", "-o", "build/002_fib_sum"
       ]
+    },
+
+    {
+      "label": "build++ 003_prime_factors",
+      "type": "shell",
+      "command": "clang++",
+      "args": [
+          "-I${workspaceFolder}", "-DDEBUG_LOG_CXX", "-std=c++14", "-g", "src/003_prime_factors.cpp", "-o", "build/003_prime_factors"
+      ]
     }
 
   ]
