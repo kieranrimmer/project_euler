@@ -10,6 +10,16 @@
       "args": [
           "-I${workspaceFolder}", "-DDEBUG_LOG_CXX", "-std=c++14", "-g", "src/001_3_5_sum.cpp", "-o", "build/001_3_5_sum"
       ]
+    },
+
+    {
+      "label": "build++ 002_fib_sum",
+      "type": "shell",
+      "command": "clang++",
+      "args": [
+          "-I${workspaceFolder}", "-DDEBUG_LOG_CXX", "-std=c++14", "-g", "src/002_fib_sum.cpp", "-o", "build/002_fib_sum"
+      ]
     }
+
   ]
 }

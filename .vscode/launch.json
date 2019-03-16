@@ -6,7 +6,7 @@
   "configurations": [
 
     {
-      "name": "build_a_string (lldb) Launch",
+      "name": "001_3_5_sum (lldb) Launch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/build/001_3_5_sum",
@@ -17,6 +17,20 @@
       "externalConsole": true,
       "MIMode": "lldb",
       "preLaunchTask": "build++ 001_3_5_sum"
+    },
+
+    {
+      "name": "002_fib_sum (lldb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/002_fib_sum",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "preLaunchTask": "build++ 002_fib_sum"
     }
     
 
