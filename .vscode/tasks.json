@@ -28,6 +28,15 @@
       "args": [
           "-I${workspaceFolder}", "-DDEBUG_LOG_CXX", "-std=c++14", "-g", "src/003_prime_factors.cpp", "-o", "build/003_prime_factors"
       ]
+    },
+
+    {
+      "label": "build++ 004_palindromic_sums",
+      "type": "shell",
+      "command": "clang++",
+      "args": [
+          "-I${workspaceFolder}", "-DDEBUG_LOG_CXX", "-std=c++14", "-g", "src/004_palindromic_sums.cpp", "-o", "build/004_palindromic_sums"
+      ]
     }
 
   ]

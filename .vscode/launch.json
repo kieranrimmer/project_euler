@@ -45,6 +45,20 @@
       "externalConsole": true,
       "MIMode": "lldb",
       "preLaunchTask": "build++ 003_prime_factors"
+    },
+
+    {
+      "name": "004_palindromic_sums (lldb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/004_palindromic_sums",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "preLaunchTask": "build++ 004_palindromic_sums"
     }
     
 
