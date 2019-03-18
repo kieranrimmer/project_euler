@@ -37,6 +37,15 @@
       "args": [
           "-I${workspaceFolder}", "-DDEBUG_LOG_CXX", "-std=c++14", "-g", "src/004_palindromic_sums.cpp", "-o", "build/004_palindromic_sums"
       ]
+    },
+
+    {
+      "label": "build++ 024_lexicographical_sort_random_access",
+      "type": "shell",
+      "command": "clang++",
+      "args": [
+          "-I${workspaceFolder}", "-DDEBUG_LOG_CXX", "-std=c++14", "-g", "src/024_lexicographical_sort_random_access.cpp", "-o", "build/024_lexicographical_sort_random_access"
+      ]
     }
 
   ]

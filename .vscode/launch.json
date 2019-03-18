@@ -59,7 +59,23 @@
       "externalConsole": true,
       "MIMode": "lldb",
       "preLaunchTask": "build++ 004_palindromic_sums"
+    },
+
+    {
+      "name": "024_lexicographical_sort_random_access (lldb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/024_lexicographical_sort_random_access",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "preLaunchTask": "build++ 024_lexicographical_sort_random_access"
     }
+
+    
     
 
   ]
