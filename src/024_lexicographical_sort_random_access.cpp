@@ -73,6 +73,7 @@ void findAndPrintLexicographicalOrdinal(std::map<int, char> charContainer, int o
     quotient = (remainder -1) / factorial(pos - 1);
     remainder = (remainder -1) % factorial(pos -1);
     //
+    auto csize = charContainer.size();
     cc = charContainer.find(charContainer.size() - pos + quotient);
     //auto cc = charContainer.find(2);
     toAppend = cc->second;
@@ -106,16 +107,16 @@ void findAndPrintLexicographicalOrdinal(std::map<int, char> charContainer, int o
 
 int main(int argc, char * argv[]) {
   std::cout << charContainer.size() << "\n";
-  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 0);
-  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 5);
-  std::cout << "\n\n\n";
-  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 6);
-  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 7);
-  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 25);
-  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 121);
-  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 721);
-  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 5041);
-  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 40321);
+  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 0);
+  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 5);
+  // std::cout << "\n\n\n";
+  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 6);
+  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 7);
+  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 25);
+  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 121);
+  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 721);
+  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 5041);
+  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 40321);
   findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 322881);
   // std::cout << charContainer.size() << "\n";
   // findAndPrintLexicographicalOrdinal(charContainer, 1'000'000);
