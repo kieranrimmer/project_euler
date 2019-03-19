@@ -117,7 +117,7 @@ std::string findAndPrintLexicographicalOrdinal(std::map<int, char> charContainer
 int main(int argc, char * argv[]) {
   std::cout << charContainer.size() << "\n";
   // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 0);
-  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 5);
+  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 6);
   // std::cout << "\n\n\n";
   assert(findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 5) == "0123456978" );
   findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 7);

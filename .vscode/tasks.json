@@ -46,6 +46,15 @@
       "args": [
           "-I${workspaceFolder}", "-DDEBUG_LOG_CXX", "-std=c++14", "-g", "src/024_lexicographical_sort_random_access.cpp", "-o", "build/024_lexicographical_sort_random_access"
       ]
+    },
+
+    {
+      "label": "build++ 024_geeks_answer",
+      "type": "shell",
+      "command": "clang++",
+      "args": [
+          "-I${workspaceFolder}", "-DDEBUG_LOG_CXX", "-std=c++14", "-g", "src/024_geeks_answer.cpp", "-o", "build/024_geeks_answer"
+      ]
     }
 
   ]

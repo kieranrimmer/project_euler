@@ -73,7 +73,23 @@
       "externalConsole": true,
       "MIMode": "lldb",
       "preLaunchTask": "build++ 024_lexicographical_sort_random_access"
+    },
+
+    {
+      "name": "024_geeks_answer (lldb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/024_geeks_answer",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "preLaunchTask": "build++ 024_geeks_answer"
     }
+
+
 
     
     
