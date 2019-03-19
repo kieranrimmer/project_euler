@@ -15,6 +15,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <string>
 
 static std::map<int, char> charContainer(
   {
@@ -48,8 +49,8 @@ int findOrdinalRemainder(int ordinal) {
   return 0;
 }
 
-void findAndPrintLexicographicalOrdinal(std::map<int, char> charContainer, int ordinal) {
-  std::vector<char> retVal;
+std::string findAndPrintLexicographicalOrdinal(std::map<int, char> charContainer, int ordinal) {
+  
   int posOriginal = findStringPivotPosition(charContainer, ordinal);
   int pos = posOriginal;
   int quotient = (ordinal -1) / factorial(pos -1);
@@ -69,7 +70,7 @@ void findAndPrintLexicographicalOrdinal(std::map<int, char> charContainer, int o
   suffixVector.push_back(toAppend);
 
   while (remainder != 0) {
-    --pos;
+    
     quotient = (remainder -1) / factorial(pos - 1);
     remainder = (remainder -1) % factorial(pos -1);
     //
@@ -80,9 +81,13 @@ void findAndPrintLexicographicalOrdinal(std::map<int, char> charContainer, int o
     charContainer.erase(cc);
     // charContainer.erase(charContainer.find(quotient));
     suffixVector.push_back(toAppend);
+    --pos;
   }
 
-  auto finalIt = charContainer.size() -  pos ? charContainer.find(charContainer.size() - pos) : charContainer.end();
+  std::string retVal;
+
+  auto remainingEntries = charContainer.size() -  pos + 1; 
+  auto finalIt = remainingEntries ? charContainer.find(charContainer.size() - pos) : charContainer.end();
   while (finalIt != charContainer.end()) {
     suffixVector.push_back(finalIt->second);
     ++finalIt;
@@ -94,30 +99,35 @@ void findAndPrintLexicographicalOrdinal(std::map<int, char> charContainer, int o
   auto val = it->first;
   while (it != charContainer.end() && it->first < containerSize - posOriginal) {
     std::cout << it->second;
+    retVal.push_back(it->second);
     ++it;
   }
 
   for (int i=0; i < suffixVector.size(); ++i) {
     std::cout << suffixVector[i];
+    retVal.push_back(suffixVector[i]);
   }
 
   std::cout << "\n\n";
+
+  return retVal;
   
 }
 
 int main(int argc, char * argv[]) {
   std::cout << charContainer.size() << "\n";
   // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 0);
-  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 5);
+  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 5);
   // std::cout << "\n\n\n";
-  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 6);
-  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 7);
-  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 25);
-  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 121);
-  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 721);
-  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 5041);
-  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 40321);
-  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 322881);
+  assert(findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 5) == "0123456978" );
+  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 7);
+  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 25);
+  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 121);
+  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 721);
+  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 5041);
+  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 40321);
+  findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 362881);
+  // findAndPrintLexicographicalOrdinal(std::map<int, char>(charContainer), 1'000'000);
   // std::cout << charContainer.size() << "\n";
   // findAndPrintLexicographicalOrdinal(charContainer, 1'000'000);
 }
